@@ -8,3 +8,30 @@
 
 - **Já os testes instrumentados**, também conhecidos como testes de integração, são realizados em um ambiente que simula o comportamento real do aplicativo em um dispositivo Android. Esses testes verificam a interação entre várias unidades de código, como classes, componentes ou módulos, e podem incluir testes de interface do usuário (UI). Os testes instrumentados são executados em um dispositivo ou emulador, permitindo que sejam avaliados aspectos como o fluxo de dados, a comunicação com serviços externos e o desempenho do aplicativo em um ambiente mais próximo do real.
 
+## Arquitetura do Projeto
+```
+android-com-kotlin
+├── manifests
+│   │   ├── AndroidManifest.xml
+├── java
+│   │   ├── br.com.alura.orgs
+│   │   │       ├── database
+│   │   │       ├── extensions
+│   │   │       ├── model
+│   │   │       ├── preferences
+│   │   │       └── ui
+│   │   ├── br.com.alura.orgs(androidTest)
+│   │   │       └── ProdutosTelasTests
+│   │   ├── br.com.alura.orgs(test)
+│   │   │       └── ProdutoRepositoryTests
+│   │   │       └── ProdutosTelasTests
+├── res
+│   │   │       ├── drawable
+│   │   │       ├── font
+│   │   │       ├── layout
+│   │   │       ├── menu
+│   │   │       └── values
+├── Gradle Scripts
+│   │   │       ├── build.gradle(Project: Orgs)
+│   │   │       ├── build.gradle(Module :app)
+```
