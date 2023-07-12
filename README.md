@@ -14,15 +14,15 @@ android-com-kotlin
 ├── manifests
 │   │   ├── AndroidManifest.xml
 ├── java
-│   │   ├── br.com.alura.orgs
+│   │   ├── orgs
 │   │   │       ├── database
 │   │   │       ├── extensions
 │   │   │       ├── model
 │   │   │       ├── preferences
 │   │   │       └── ui
-│   │   ├── br.com.alura.orgs(androidTest)
+│   │   ├── orgs(androidTest)
 │   │   │       └── ProdutosTelasTests
-│   │   ├── br.com.alura.orgs(test)
+│   │   ├── orgs(test)
 │   │   │       └── ProdutoRepositoryTests
 │   │   │       └── ProdutosTelasTests
 ├── res
