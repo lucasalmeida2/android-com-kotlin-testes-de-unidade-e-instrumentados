@@ -16,9 +16,9 @@ android-com-kotlin
 ├── java                            #Diretório que contém o código-fonte Kotlin do projeto
 │   │   ├── orgs
 │   │   │       ├── database        #Diretório que contém classes relacionadas ao gerenciamento de banco de dados
-│   │   │       ├── extensions
-│   │   │       ├── model
-│   │   │       ├── preferences
+│   │   │       ├── extensions      #Diretório que contém extensões de função Kotlin adicionais para facilitar tarefas comuns
+│   │   │       ├── model           #Diretório que contém classes que representam modelos de dados, como objetos ou entidades
+│   │   │       ├── preferences     #Diretório que contém classes relacionadas ao gerenciamento de preferências do aplicativo
 │   │   │       └── ui              #Diretório que contém classes responsáveis pela interface do usuário,como atividades, fragmentos,etc
 │   │   ├── orgs(androidTest)       #Diretório que contém testes instrumentados (testes que são executados em um dispositivo)
 │   │   │       └── ProdutosTelasTests
@@ -32,6 +32,19 @@ android-com-kotlin
 │   │   │       ├── menu            #Subdiretório que contém arquivos XML que descrevem menus usados no aplicativo
 │   │   │       └── values          #Subdiretório que contém arquivos XML com valores constantes, como strings, cores, estilos, etc
 ├── Gradle Scripts                  #Diretório que contém scripts de configuração e construção do Gradle
-│   │   │       ├── build.gradle(Project: Orgs)  #Diretório usado para configurar as dependências e as configurações gerais do projeto.
+│   │   │       ├── build.gradle(Project: Orgs)  #Diretório usado para configurar as dependências e as configurações gerais do projeto
 │   │   │       ├── build.gradle(Module :app)    #Diretório usado para configurar as dependências e as configurações do aplicativo
 ```
+## Ferramentas utilizadas para o desenvolvimento do aplicativo
+- **Kotlin**, como linguagem de programação;
+- **Android Studio**, é o ambiente de desenvolvimento integrado (IDE) oficial para o desenvolvimento de aplicativos Android
+- **JDK**, foi utilizado para fornecer as ferramentas necessárias para compilar, depurar e executar o código Kotlin;
+- **Xml**, foi utilizado para a criação de arquivos de marcação estruturada, como layouts de interface e configurações de recursos;
+- **Room**, foi utilizado para fornecer uma camada de abstração sobre o banco de dados, facilitando a manipulação e persistência de dados no aplicativo;
+- **Coil**, foi utilizado para facilitar o carregamento e exibição de imagens no aplicativo, oferecendo recursos avançados de cache e manipulação de imagens;
+
+## Ferramentas utilizadas para os testes de unidade e instrumentados
+- **Junit**, é um framework open-source, utilizado para escrever e executar testes de unidade automatizados;
+- **Mockk**, é uma biblioteca Kotlin que permite a criação de objetos simulados (mocks) para testes,facilitando a criação de testes mais robustos e isolados;
+- **Kluent**, é uma biblioteca Kotlin que fornece uma sintaxe mais fluente e legível para asserções em testes;
+- **Espresso**, é um framework de teste instrumentado para Android, projetado para testar a interface do usuário de um aplicativo;
