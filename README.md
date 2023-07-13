@@ -11,27 +11,27 @@
 ## Arquitetura do Projeto
 ```
 android-com-kotlin
-├── manifests
-│   │   ├── AndroidManifest.xml
-├── java
+├── manifests                       #Diretório que contém o arquivo de manifesto do Android
+│   │   ├── AndroidManifest.xml     #Diretório que contém permissões, componentes e configurações do aplicativo
+├── java                            #Diretório que contém o código-fonte Kotlin do projeto
 │   │   ├── orgs
-│   │   │       ├── database
+│   │   │       ├── database        #Diretório que contém classes relacionadas ao gerenciamento de banco de dados
 │   │   │       ├── extensions
 │   │   │       ├── model
 │   │   │       ├── preferences
-│   │   │       └── ui
-│   │   ├── orgs(androidTest)
+│   │   │       └── ui              #Diretório que contém classes responsáveis pela interface do usuário,como atividades, fragmentos,etc
+│   │   ├── orgs(androidTest)       #Diretório que contém testes instrumentados (testes que são executados em um dispositivo)
 │   │   │       └── ProdutosTelasTests
-│   │   ├── orgs(test)
+│   │   ├── orgs(test)              #Diretório que contém testes unitários
 │   │   │       └── ProdutoRepositoryTests
 │   │   │       └── ProdutosTelasTests
-├── res
-│   │   │       ├── drawable
-│   │   │       ├── font
-│   │   │       ├── layout
-│   │   │       ├── menu
-│   │   │       └── values
-├── Gradle Scripts
-│   │   │       ├── build.gradle(Project: Orgs)
-│   │   │       ├── build.gradle(Module :app)
+├── res                             #Diretório que contém recursos do aplicativo, como arquivos de layout, imagens, ícones, etc
+│   │   │       ├── drawable        #Subdiretório que contém arquivos de imagem ou vetores usados para desenhar elementos visuais
+│   │   │       ├── font            #Subdiretório que contém arquivos de fonte personalizados usados no aplicativo
+│   │   │       ├── layout          #Subdiretório que contém arquivos XML que descrevem a estrutura e o design das interfaces do usuário
+│   │   │       ├── menu            #Subdiretório que contém arquivos XML que descrevem menus usados no aplicativo
+│   │   │       └── values          #Subdiretório que contém arquivos XML com valores constantes, como strings, cores, estilos, etc
+├── Gradle Scripts                  #Diretório que contém scripts de configuração e construção do Gradle
+│   │   │       ├── build.gradle(Project: Orgs)  #Diretório usado para configurar as dependências e as configurações gerais do projeto.
+│   │   │       ├── build.gradle(Module :app)    #Diretório usado para configurar as dependências e as configurações do aplicativo
 ```
