@@ -47,7 +47,7 @@ android-com-kotlin
 
 ## Ferramentas utilizadas para a criação dos testes de unidade e instrumentados
 - **Junit**, é um framework open-source, utilizado para escrever e executar testes de unidade automatizados;
-- **Triple A** o padrão AAA é uma maneira comum de escrever testes de unidade e deve possuir três etapas: Arrange (Preparar o teste), Act (Rodar o teste) e Assert (Verificar as asserções);
+- **Triple A**, o padrão AAA é uma maneira comum de escrever testes de unidade e deve possuir três etapas: Arrange (Preparar o teste), Act (Rodar o teste) e Assert (Verificar as asserções);
 - **Mockk**, é uma biblioteca Kotlin que permite a criação de objetos simulados (mocks) para testes,facilitando a criação de testes mais robustos e isolados;
 - **Kluent**, é uma biblioteca Kotlin que fornece uma sintaxe mais fluente e legível para asserções em testes;
 - **Espresso**, é um framework de teste instrumentado para Android, projetado para testar a interface do usuário de um aplicativo;
@@ -64,3 +64,4 @@ android-com-kotlin
 
 5- O Android Studio começará a executar o teste selecionado e exibirá os resultados no painel "Run" na parte inferior da janela.
 
+<img width="994" alt="Como executar os testes " src="https://github.com/lucasalmeida2/android-com-kotlin-testes-de-unidade-e-instrumentados/assets/101592386/cda6009f-d7b3-49bc-ac43-3195c3214de3">
