@@ -1,6 +1,6 @@
 # Projeto android-com-kotlin
 
-**O objetivo deste projeto é a criação do aplicativo "Orgs" com o foco na implementação de testes de unidade e intrumentados.**
+**O objetivo deste projeto é a criação do aplicativo "Orgs" com o foco na implementação de testes de unidade e instrumentados.**
 
 ## Testes de unidade e instrumentados
 
