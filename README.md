@@ -35,6 +35,7 @@ android-com-kotlin
 │   │   │       ├── build.gradle(Project: Orgs)  #Diretório usado para configurar as dependências e as configurações gerais do projeto
 │   │   │       ├── build.gradle(Module :app)    #Diretório usado para configurar as dependências e as configurações do aplicativo
 ```
+
 ## Ferramentas utilizadas para o desenvolvimento do aplicativo
 - **Kotlin**, como linguagem de programação;
 - **Android Studio**, é o ambiente de desenvolvimento integrado (IDE) oficial para o desenvolvimento de aplicativos Android
@@ -43,8 +44,23 @@ android-com-kotlin
 - **Room**, foi utilizado para fornecer uma camada de abstração sobre o banco de dados, facilitando a manipulação e persistência de dados no aplicativo;
 - **Coil**, foi utilizado para facilitar o carregamento e exibição de imagens no aplicativo, oferecendo recursos avançados de cache e manipulação de imagens;
 
-## Ferramentas utilizadas para os testes de unidade e instrumentados
+
+## Ferramentas utilizadas para a criação dos testes de unidade e instrumentados
 - **Junit**, é um framework open-source, utilizado para escrever e executar testes de unidade automatizados;
+- **Triple A** o padrão AAA é uma maneira comum de escrever testes de unidade e deve possuir três etapas: Arrange (Preparar o teste), Act (Rodar o teste) e Assert (Verificar as asserções);
 - **Mockk**, é uma biblioteca Kotlin que permite a criação de objetos simulados (mocks) para testes,facilitando a criação de testes mais robustos e isolados;
 - **Kluent**, é uma biblioteca Kotlin que fornece uma sintaxe mais fluente e legível para asserções em testes;
 - **Espresso**, é um framework de teste instrumentado para Android, projetado para testar a interface do usuário de um aplicativo;
+
+## Como executar os testes? 
+
+1- Abra o Android Studio e navegue até o diretório do projeto.
+
+2- No painel esquerdo do Android Studio, clique na pasta "Java".
+
+3- Abra a pasta Orgs(androidTest) para executar os testes instrumentados ou a pasta Orgs(test) para executar os testes de unidade.
+
+4- Clique com o botão direito do mouse no arquivo de teste de unidade que deseja executar e selecione a opção "Run 'nome_do_teste'".
+
+5- O Android Studio começará a executar o teste selecionado e exibirá os resultados no painel "Run" na parte inferior da janela.
+
