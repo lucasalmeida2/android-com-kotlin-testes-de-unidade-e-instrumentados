@@ -116,3 +116,22 @@ class TestaUsuario {
         Assert.assertFalse(resultado)
     }
 }
+
+//Modificando o para teste no SonarCloud
+@Test
+fun retornaFalsoSeASenhaDoUsuarioEstiverErradaComMenosDe6Caracteres() {
+    //Arrange
+    val usuarioInvalido = Usuario(
+        id = "usuario",
+        email = "usuario@valido.com",
+        senha = "fraca"
+    )
+
+    //Act
+    val resultado = usuarioInvalido.ehValido()
+
+    //Assert
+    Assert.assertFalse(resultado)
+}
+}
+
