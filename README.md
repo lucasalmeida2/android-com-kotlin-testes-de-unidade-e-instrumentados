@@ -65,3 +65,5 @@ android-com-kotlin
 5- O Android Studio começará a executar o teste selecionado e exibirá os resultados no painel "Run" na parte inferior da janela.
 
 <img width="994" alt="Como executar os testes " src="https://github.com/lucasalmeida2/android-com-kotlin-testes-de-unidade-e-instrumentados/assets/101592386/cda6009f-d7b3-49bc-ac43-3195c3214de3">
+
+...
