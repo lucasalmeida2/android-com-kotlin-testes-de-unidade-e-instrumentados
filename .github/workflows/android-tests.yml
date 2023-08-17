@@ -29,9 +29,9 @@ jobs:
       run: ./gradlew test
 
     - name: Calculate test coverage
-      run: ./gradlew jacocoTestReport
+      run:  Run 'ProdutoTests' with Coverage
 
-    - name: Display test coverage percentage
-      run: |
-        grep "Overall coverage" app/build/reports/jacoco/jacocoTestReport/html/index.html | \
-        sed -E 's/<[^>]+>//g' | awk '{print $3}'
+    # - name: Display test coverage percentage
+    #   run: |
+    #     grep "Overall coverage" app/build/reports/jacoco/jacocoTestReport/html/index.html | \
+    #     sed -E 's/<[^>]+>//g' | awk '{print $3}'
