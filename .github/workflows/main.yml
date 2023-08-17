@@ -35,4 +35,3 @@ jobs:
       run: |
         grep "Overall coverage" app/build/reports/jacoco/jacocoTestReport/html/index.html | \
         sed -E 's/<[^>]+>//g' | awk '{print $3}'
-
