@@ -5,39 +5,21 @@ on:
     branches:
       - main  # ou a branch que você deseja monitorar
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - name: Checkout code
-#       uses: actions/checkout@v2
-
-#     - name: Set up JDK
-#       uses: actions/setup-java@v2
-#       with:
-#         java-version: '11'  # ou a versão que você está usando no projeto
-
-#     - name: Build with Gradle
-#       run: ./gradlew assemble
-
-#     - name: Run tests
-#       run: ./gradlew test
-
-  jobs:
-  
-  continuos-integration:
+jobs:
+  build:
     runs-on: ubuntu-latest
-    
-    steps:
-      - uses: actions/checkout@v3
-      - name: Using node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20.
-      - name: run install, build and test
-        run: |
-          npm install
-          npm run build
-          npm run test
 
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'  # ou a versão que você está usando no projeto
+
+    - name: Build with Gradle
+      run: ./gradlew assemble
+
+    - name: Run tests
+      run: ./gradlew test
