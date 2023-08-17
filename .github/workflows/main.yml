@@ -1,15 +1,14 @@
-name: Run Android Unit Tests
+name: Android Unit Tests
 
 on:
   push:
     branches:
-      - main  # Ou a branch que você deseja monitorar
+      - main  # ou a branch que você deseja monitorar
 
 jobs:
-  test:
-    name: Run Tests
+  build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -17,10 +16,11 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v2
       with:
-        java-version: '11'
+        java-version: '11'  # ou a versão que você está usando no projeto
 
-    - name: Grant execute permission to the script
-      run: chmod +x run_tests.sh
-      
-    - name: Run Tests
-      run: ./run_tests.sh
+    - name: Build with Gradle
+      run: ./gradlew assemble
+
+    - name: Run tests
+      run: ./gradlew test
+
