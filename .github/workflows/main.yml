@@ -19,6 +19,9 @@ jobs:
         distribution: 'adopt'
         java-version: '11'  # ou a versão que você está usando no projeto
 
+    - name: Grant execute permission to gradlew
+      run: chmod +x gradlew  # Concede permissões de execução
+
     - name: Build with Gradle
       run: ./gradlew assemble
 
