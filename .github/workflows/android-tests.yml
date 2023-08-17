@@ -26,7 +26,13 @@ jobs:
       run: ./gradlew assemble
 
     - name: Run tests and save results
-      run: ./gradlew clean test > test_results.txt
+      run: |
+        ./gradlew test > test_output.txt
+        total_tests=$(grep -o "Tests run: [0-9]*" test_output.txt | awk -F ": " '{sum+=$2} END{print sum}')
+        successful_tests=$(grep -o "OK \([0-9]* tests\)" test_output.txt | awk '{sum+=$1} END{print sum}')
+        percentage=$((successful_tests * 100 / total_tests))
+        echo "Porcentagem de testes bem-sucedidos: $percentage%"
+
 
 
     # - name: Run tests
