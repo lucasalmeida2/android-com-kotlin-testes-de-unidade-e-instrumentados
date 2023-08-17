@@ -1,0 +1,25 @@
+name: Android Unit Tests
+
+on:
+  push:
+    branches:
+      - main  # ou a branch que você deseja monitorar
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'  # ou a versão que você está usando no projeto
+
+    - name: Build with Gradle
+      run: ./gradlew assemble
+
+    - name: Run tests
+      run: ./gradlew test
