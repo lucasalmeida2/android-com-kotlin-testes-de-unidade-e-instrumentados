@@ -11,16 +11,11 @@ android {
 
     android {
         // ...
-
         buildTypes {
             debug {
-                testCoverageEnabled = true
+                testCoverageEnabled true
             }
         }
-    }
-
-    jacoco {
-        toolVersion = "0.8.7"  // Use a versão mais recente do Jacoco
     }
 
     defaultConfig {
