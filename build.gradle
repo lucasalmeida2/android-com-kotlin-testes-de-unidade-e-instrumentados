@@ -34,3 +34,6 @@ allprojects {
 subprojects {
     apply from: "../buildscripts/kover.gradle"
 }
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
