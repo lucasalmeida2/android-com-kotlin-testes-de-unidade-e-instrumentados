@@ -3,8 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
-    apply plugin: "com.vanniktech.android.junit.jacoco"
-    apply from: 'jacoco.gradle'
 }
 
 android {
