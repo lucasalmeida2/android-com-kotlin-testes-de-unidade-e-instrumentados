@@ -1,19 +1,23 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.5.31"
+    ext {
+        ext.kotlin_version = "1.5.31"
+
+        //kotlinVersion = "1.7.21"
+
+        // https://github.com/Kotlin/kotlinx-kover/releases
+        koverVersion = "0.4.1"
+    }
+
     repositories {
         google()
         mavenCentral()
     }
 
-    plugins {
-        id 'java'
-        id 'jacoco'
-    }
-
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlinx:kover:$koverVersion"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -27,61 +31,6 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
-
-repositories {
-    jcenter()
-}
-
-dependencies {
-    testImplementation 'junit:junit:4.12'
-}
-
-test {
-    useJUnit()
-}
-
-jacoco {
-    toolVersion = "0.8.7" // Versão do JaCoCo
-}
-
-jacocoTestReport {
-    reports {
-        xml.enabled true
-        html.enabled true
-    }
-}
-
-// Configurações para executar os testes e gerar relatórios de cobertura
-tasks.test.dependsOn jacocoTestReport
-
-// Configurações para executar os testes com cobertura de código
-test {
-    jacoco {
-        append = false
-        destinationFile = file("$buildDir/jacoco/test.exec")
-    }
-}
-
-// Configurações para os relatórios de cobertura
-jacocoTestReport {
-    dependsOn test
-    reports {
-        xml.enabled true
-        html.enabled true
-        // Pode adicionar outros formatos de relatório aqui, se necessário
-    }
-}
-
-// Tarefa personalizada para gerar relatório de cobertura sem executar testes
-task jacocoReport(dependsOn: ['test', 'jacocoTestReport']) {
-    doLast {
-        // Isso gera um relatório de cobertura sem executar os testes novamente
-        jacocoTestReport {
-            executionData = files("$buildDir/jacoco/test.exec")
-        }
-    }
+subprojects {
+    apply from: "../buildscripts/kover.gradle"
 }
