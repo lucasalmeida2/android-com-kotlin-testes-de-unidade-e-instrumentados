@@ -1,12 +1,12 @@
 name: Measure coverage
 
-# on:
-#   pull_request:
-
 on:
-  push:
-    branches:
-      - main  # ou a branch que você deseja monitorar
+  pull_request:
+
+# on:
+#   push:
+#     branches:
+#       - main  # ou a branch que você deseja monitorar
 
 jobs:
   build:
