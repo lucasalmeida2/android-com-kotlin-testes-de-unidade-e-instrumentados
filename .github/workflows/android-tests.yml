@@ -1,12 +1,12 @@
 name: Measure coverage
 
-on:
-  pull_request:
-
 # on:
-#   push:
-#     branches:
-#       - main  # ou a branch que você deseja monitorar
+#   pull_request:
+
+on:
+  push:
+    branches:
+      - main  # ou a branch que você deseja monitorar
 
 jobs:
   build:
@@ -28,7 +28,8 @@ jobs:
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v2
       - name: Generate kover coverage report
-        run: ./gradlew koverXmlReport
+        run: ./gradlew koverReport
+        # run: ./gradlew koverXmlReport
         
       - name: Add coverage report to PR
         id: kover
