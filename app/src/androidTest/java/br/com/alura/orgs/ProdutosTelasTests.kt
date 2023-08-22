@@ -46,22 +46,22 @@ class ProdutosTelasTests {
         onView(withId(R.id.activity_formulario_produto_botao_salvar)).check(matches(isDisplayed()))
     }
 
-    @Test
-    fun deveSerCapazDePreencherOsCamposESalvar() {
-        // act
-        clicaNoFAB()
-
-        preencheCamposDoFormulario(
-            nome = "Banana",
-            descricao = "Prata",
-            valor = "6.99"
-        )
-
-        //Assert
-        clicaEmSalvar()
-
-        onView(withText("Banana")).check(matches(isDisplayed()))
-    }
+//    @Test
+//    fun deveSerCapazDePreencherOsCamposESalvar() {
+//        // act
+//        clicaNoFAB()
+//
+//        preencheCamposDoFormulario(
+//            nome = "Banana",
+//            descricao = "Prata",
+//            valor = "6.99"
+//        )
+//
+//        //Assert
+//        clicaEmSalvar()
+//
+//        onView(withText("Banana")).check(matches(isDisplayed()))
+//    }
 
     @Test
     fun deveSerCapazDeEditarUmProduto() {

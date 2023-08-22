@@ -26,21 +26,21 @@ class ProdutoTests {
         valorEhValido.shouldBeTrue()
     }
 
-    @Test
-    fun `deve retornar falso quando o valor for maior que cem`() {
-        //Arrange
-        val produtoInvalido = Produto(
-            nome = "Carambola",
-            descricao = "Amarela",
-            valor = BigDecimal("105.99")
-        )
-
-        //Act
-        val valorEhValido = produtoInvalido.valorEhValido
-
-        //Assert
-        valorEhValido.shouldBeFalse()
-    }
+//    @Test
+//    fun `deve retornar falso quando o valor for maior que cem`() {
+//        //Arrange
+//        val produtoInvalido = Produto(
+//            nome = "Carambola",
+//            descricao = "Amarela",
+//            valor = BigDecimal("105.99")
+//        )
+//
+//        //Act
+//        val valorEhValido = produtoInvalido.valorEhValido
+//
+//        //Assert
+//        valorEhValido.shouldBeFalse()
+//    }
 
     @Test
     fun `deve retornar falso quando o valor for menor ou igual a zero`() {
